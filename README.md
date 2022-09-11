@@ -1,4 +1,3 @@
-
 # Take Home Assignment
 
 Thanks so much for your interest in working at HASHPAYS as a [Software Engineer](https://hashpays.teamtailor.com/jobs/1720928-software-engineer)
