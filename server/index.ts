@@ -52,4 +52,3 @@ server.listen(port, () => {
 })
 
 export default server
-export { io }
