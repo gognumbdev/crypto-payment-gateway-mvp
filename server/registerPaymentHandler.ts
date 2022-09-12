@@ -18,7 +18,7 @@ const addPaymentToMonitor = (io: Server, payment: Payment) => {
 }
 
 const paymentHandler = (io: Server, socket: Socket) => {
-    // Listenn to `add_payment_to_monitor` from client to monitor user transaction on Ethereum Ropsten
+    // Listen to `add_payment_to_monitor` from client to monitor user transaction on Ethereum Ropsten network
     socket.on("add_payment_to_monitor", (payment) => addPaymentToMonitor(io, payment))
 }
 
