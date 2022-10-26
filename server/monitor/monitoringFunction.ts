@@ -26,7 +26,7 @@ const getLatestBlockNumber = async () => {
     return parseInt(latestBlockResponse.data.result, 16)
 }
 
-const checkExpieredPayment = (
+const checkExpiredPayment = (
     io: Server,
     pendingPayment: PendingPayment[],
     blockNumber: number,
@@ -163,7 +163,7 @@ const removeCompletedPayment = (pendingPayment: PendingPayment[], completedPayme
 export {
     checkPendingPayment,
     getLatestBlockNumber,
-    checkExpieredPayment,
+    checkExpiredPayment as checkExpieredPayment,
     removeExpiredPaymentId,
     getUserTransaction,
     updatePaymentWithUserTransaction,

@@ -35,6 +35,22 @@ router.get("/pendingPayments", (req: Request, res: Response) => {
     }
 })
 
+router.get("/pendingPayment/:userAddress", (req: Request, res: Response) => {
+    let { userAddress } = req.params
+    // This endpoint respond with all payments that still pending state
+    try {
+        console.log("Get all pending payments \n")
+        let userPendingPayments = pendingPayment.filter(
+            (payment) => payment.userAddress === userAddress
+        )
+        res.status(200).json({
+            data: userPendingPayments,
+        })
+    } catch (error) {
+        console.log(error)
+    }
+})
+
 router.post("/createPayment", async (req: Request, res: Response) => {
     try {
         const { userAddress, network, currency, amount } = req.body
@@ -53,6 +69,9 @@ router.post("/createPayment", async (req: Request, res: Response) => {
 
         if (readyMerchantAddress === undefined) {
             throw "Request fail due to no ready merchant address"
+            // res.status(404).json({
+            //     message: "pending order full",
+            // })
         }
 
         // Get block number from Infura API by request to our server

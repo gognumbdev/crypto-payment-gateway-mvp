@@ -1,6 +1,9 @@
 import server from "../index"
 import request from "supertest"
 import Payment from "../../database/types/Payment"
+import { ethers } from "ethers"
+import { PendingPayment } from "../types/Payment"
+import { pendingPayment } from "../../database/payments"
 
 describe("test root server endpoint", () => {
     test("should send Hashpays MVP Server", async () => {

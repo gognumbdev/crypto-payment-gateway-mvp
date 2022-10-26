@@ -2,7 +2,7 @@ import { ethers } from "ethers"
 import { Server, Socket } from "socket.io"
 import Payment from "../database/types/Payment"
 import { pendingPayment } from "../database/payments"
-import ethereumMonitor from "./monitor/ethereumMonitor"
+import monitorEthereum from "./monitor/ethereumMonitor"
 
 // Add payment order to Ethereum Ropsten monitor to detect user transaction
 const addPaymentToMonitor = (io: Server, payment: Payment) => {
@@ -13,7 +13,7 @@ const addPaymentToMonitor = (io: Server, payment: Payment) => {
         // Add new payment to monitor to the pendingPayment in the database
         pendingPayment.push({ ...payment, received: ethers.BigNumber.from("0") })
         // Now Ethereum Monitor stop, So Start Ethereum Monitor to detect user transaction
-        ethereumMonitor(io)
+        monitorEthereum(io)
     }
 }
 
