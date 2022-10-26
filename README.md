@@ -1,16 +1,15 @@
-# Take Home Assignment
+# Crypto Payment Gateway
 
-Thanks so much for your interest in working at HASHPAYS as a [Software Engineer](https://hashpays.teamtailor.com/jobs/1720928-software-engineer)
-
-Please follow the link for the instructions: [Take Home Assignment](https://hashpays.notion.site/Take-Home-Assignment-28943b9a462d432f98f7d5090c2a7b55)
+Crypto Payment Gateway MVP allows you to buy product and transfer crypto on the determined blockhain.
+Crypto payment gateway services provider will detect your transaction and inform merchant.
 
 # Set up
 
 First, install dependencies on client:
 run package manager install commands in the following path
 
--   challenge-khemmapich/client/
--   challenge-khemmapich/server/
+-   crypto-payment-gateway-mvp/client/
+-   crypto-payment-gateway-mvp/server/
 
 These are package manager install commands
 
@@ -24,7 +23,7 @@ yarn install
 
 First, start React application on client path:
 
--   challenge-khemmapich/client/
+-   crypto-payment-gateway-mvp/client/
 
 with the commands
 
@@ -36,7 +35,7 @@ yarn start
 
 Next, start localhost Server on server path:
 
--   challenge-khemmapich/server/
+-   crypto-payment-gateway-mvp/server/
 
 with the commands
 
@@ -47,10 +46,8 @@ yarn run dev
 ```
 
 Finally, Run test on server folder:
-I implement unit test only server and I don't implement all functions due to I have no time. Sorry for this.
-I select backend to implement test instead of frontend because in real use case frontend depend on our customer website but backend will develop by Hashpays so it is more important to care about.
 
--   challenge-khemmapich/server/
+-   crypto-payment-gateway-mvp/server/
 
 run on this path with the commands
 
